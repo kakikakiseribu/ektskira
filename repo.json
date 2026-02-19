@@ -1,0 +1,8 @@
+{
+  "name": "EXTAkira",
+  "description": "Extension Skira by Akira",
+  "manifestVersion": 1,
+  "pluginLists": [
+    "https://raw.githubusercontent.com/kakikakiseribu/extskira/builds/plugins.json"
+  ]
+}
