@@ -49,7 +49,7 @@ jobs:
           git config user.name "GitHub Actions"
           git add .
           git commit -m "Build $GITHUB_SHA"
-          git remote add origin https://github.com/${{ github.repository }}.git
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
           git push origin builds --force
           
       - name: Debug structure
