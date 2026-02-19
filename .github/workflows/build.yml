@@ -36,7 +36,7 @@ jobs:
       - name: Prepare builds folder
         run: |
           mkdir builds
-          cp src/build/*.cs3 builds/
+          cp src/**/build/*.cs3 builds/
           cp src/build/plugins.json builds/
           cp src/build/repo.json builds/
 
