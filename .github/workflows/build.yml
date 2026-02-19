@@ -36,9 +36,9 @@ jobs:
       - name: Prepare builds folder
         run: |
           mkdir builds
-          cp src/**/build/*.cs3 builds/
+          cp src/**/build/*.cs3 builds/ || echo "no cs3 found"
           cp src/build/plugins.json builds/
-          cp src/build/repo.json builds/
+          cp src/repo.json builds/
 
       - name: Push to builds branch
         run: |
@@ -51,3 +51,8 @@ jobs:
           git commit -m "Build $GITHUB_SHA"
           git remote add origin https://github.com/${{ github.repository }}.git
           git push origin builds --force
+          
+      - name: Debug structure
+        run: |
+          ls -R
+
